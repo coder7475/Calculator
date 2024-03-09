@@ -1,0 +1,8 @@
+{
+  "name": "calc-the-world",
+  "version": "1.0.0",
+  "description": "This is a calculator",
+  "main": "index.js",
+  "author": "robiul hossain",
+  "license": "MIT"
+}
