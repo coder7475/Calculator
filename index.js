@@ -35,6 +35,7 @@ const buttons = document.querySelectorAll('.digit');
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         const value = button.value;
-        console.log(value);
+        // console.log(value);
+        display.textContent = value;
     })
 })
