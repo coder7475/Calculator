@@ -51,6 +51,6 @@ button:hover {
 }
 
 .equal {
-    grid-column-end: span 2;
+    grid-column-end: span 1;
     background-color: rgb(185, 196, 185);
 }
