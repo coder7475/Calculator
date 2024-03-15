@@ -1,4 +1,5 @@
 const add = (num1, num2) => {
+  console.log(num1 + num2);
   return num1 + num2;
 };
 
@@ -15,16 +16,16 @@ const divide = (num1, num2) => {
 };
 
 const operate = (operator, num1, num2) => {
-  if (operator === "+") add(num1, num2);
-  else if (operate === "-") subtract(num1, num2);
-  else if (operate === "*") multiply(num1 * num2);
-  else if (operate === "/") divide(num1, num2);
+  if (operator === "+") return add(num1, num2);
+  else if (operator === "-") return subtract(num1, num2);
+  else if (operator === "*") return multiply(num1 * num2);
+  else if (operator === "/") return divide(num1, num2);
 };
 
 // populate the display when clicked button
 const display = document.querySelector(".display");
 const buttons = document.querySelectorAll("button");
-console.log(buttons);
+// console.log(buttons);
 // store 2 operands and operator
 let firstOperand = null;
 let secondOperand = null;
@@ -44,8 +45,7 @@ buttons.forEach((button) => {
         operator = value;
         display.textContent = value;
       } else if (value === "=") {
-        let ans = operate(operator, firstOperand, secondOperand);
-        console.log(ans);
+        let ans = operate(operator, parseInt(firstOperand), parseInt(secondOperand));
         display.textContent = ans;
       }
     }
